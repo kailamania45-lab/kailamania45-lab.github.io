@@ -1,181 +1,139 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Saya</title>
     <style>
-        /* Reset some default */
-        *, *::before, *::after {
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f4f8;
-            margin: 0;
-            padding: 0;
-            color: #333;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #f4f4f4;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 40px 50px;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .profile img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #007bff;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .profile img:hover {
-            transform: scale(1.05);
-        }
-
-        .profile-text {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        h1 {
-            color: #007bff;
-            margin-bottom: 8px;
-            font-size: 2.5rem;
-        }
-
-        h3 {
-            color: #555;
-            margin-top: 0;
-            font-weight: 500;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #444;
-        }
-
-        .skills {
-            margin-top: 50px;
-        }
-
-        .skills h2 {
-            color: #007bff;
-            border-bottom: 3px solid #007bff;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 25px;
-            font-weight: 600;
-            font-size: 1.8rem;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        ul li {
-            background: #e6f0ff;
-            padding: 15px 20px;
-            border-radius: 10px;
-            font-weight: 500;
-            color: #0056b3;
-            box-shadow: 0 2px 6px rgba(0, 86, 179, 0.2);
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
-            transition: background-color 0.3s ease;
         }
 
-        ul li:hover {
-            background-color: #cce0ff;
-            cursor: default;
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background: #1e1e1e;
+            color: white;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #projects .projects-gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         footer {
             text-align: center;
-            margin-top: 60px;
-            color: #777;
-            font-size: 0.9rem;
-            user-select: none;
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 40px;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            .profile {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-text {
-                min-width: auto;
-            }
-
-            ul {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            }
+        a {
+            color: #333;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-        <div class="profile">
-            <!-- Ganti "foto.jpg" dengan nama file foto kamu -->
-            <img src="foto.jpg" alt="Foto Profil" />
-            <div class="profile-text">
-                <h1>Nama Kamu</h1>
-                <h3>Siswa Rekayasa Perangkat Lunak</h3>
-                <p>
-                    Saya Kaila Mania siswa SMK Informatika Utama dengan jurusan Rekayasa Perangkat Lunak(RPL), yang tertarik pada pengolahan data dan pengembangan perangkat lunak.
-                    Saya senang memecahkan masalah dengan logika dan data untuk menciptakan solusi teknologi yang efisien dan bermanfaat.
-                </p>
+    <section id="home" class="hero">
+        <h1>Selamat datang di Portofolio Saya!</h1>
+        <p>Hai, saya [Nama Anda], seorang pengembang web.</p>
+        <img src="foto-profil.jpg" alt="Foto Profil Saya" class="profile-img">
+    </section>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya seorang pengembang web yang berfokus pada desain dan pengembangan frontend. Saya memiliki pengalaman dalam HTML, CSS, JavaScript, dan beberapa framework seperti React dan Vue.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Proyek Saya</h2>
+        <div class="projects-gallery">
+            <div class="project">
+                <img src="project1.jpg" alt="Proyek 1">
+                <p>Proyek Web Aplikasi</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Proyek 2">
+                <p>Proyek Website E-Commerce</p>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Proyek 3">
+                <p>Proyek Blog Pribadi</p>
             </div>
         </div>
+    </section>
 
-        <div class="skills">
-            <h2>Keahlian</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Python & Data Analysis</li>
-                <li>Database (MySQL, Firebase)</li>
-                <li>UI/UX Design Dasar</li>
-            </ul>
-        </div>
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Email saya: <a href="mailto:email@domain.com">email@domain.com</a></p>
+    </section>
 
-        <div class="skills">
-            <h2>Keahlian</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Python & Data Analysis</li>
-                <li>Database (MySQL, Firebase)</li>
-                <li>UI/UX Design Dasar</li>
-            </ul>
-        </div>
-
-        <footer>
-            &copy; 2025 | Portofolio Saya - Dibuat dengan ❤️
-        </footer>
-    </div>
-
+    <footer>
+        <p>&copy; 2025 [Nama Anda]. All rights reserved.</p>
+    </footer>
 </body>
 </html>
