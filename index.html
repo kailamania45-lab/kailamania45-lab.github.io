@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portofolio Saya</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
+  <header>
     <h1>Nama Kamu</h1>
-    <p>Web Developer | Designer | Programmer</p>
-</header>
+    <nav>
+      <a href="#about">Tentang Saya</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
 
-<div class="container">
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Halo! Saya adalah seorang web developer yang berpengalaman dalam membuat website responsif dan menarik. Saya suka belajar teknologi baru dan selalu mencari tantangan baru.</p>
+  <main>
+    <section id="about" class="about-me">
+      <h2>Tentang Saya</h2>
+      <p>Halo! Saya siswa SMA yang senang belajar pemrograman dan membuat website. Saya ingin menunjukkan beberapa proyek yang sudah saya buat.</p>
     </section>
 
     <section id="projects">
-        <h2>Proyek Saya</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Website Portofolio</h3>
-                <p>Sebuah website yang menampilkan karya dan pengalaman saya sebagai developer.</p>
-            </div>
-            <div class="project">
-                <h3>Aplikasi ToDo List</h3>
-                <p>Aplikasi web sederhana untuk mengelola daftar tugas harian dengan fitur simpan lokal.</p>
-            </div>
-            <div class="project">
-                <h3>Blog Pribadi</h3>
-                <p>Platform blogging yang saya buat untuk berbagi pengetahuan tentang teknologi dan coding.</p>
-            </div>
-            <div class="project">
-                <h3>Toko Online</h3>
-                <p>Sebuah toko online sederhana yang menggunakan fitur pembayaran dan katalog produk.</p>
-            </div>
+      <h2>Proyek</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Website Sekolah</h3>
+          <p>Membuat website profil sekolah dengan HTML dan CSS.</p>
         </div>
+        <div class="project-card">
+          <h3>Aplikasi Kalkulator</h3>
+          <p>Aplikasi kalkulator sederhana menggunakan JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3>Blog Pribadi</h3>
+          <p>Blog untuk berbagi pengalaman belajar pemrograman.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-        <h2>Kontak</h2>
-        <p>Email: namakamu@email.com</p>
-        <p>Telepon: 0812-3456-7890</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/na
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:emailkamu@example.com">emailkamu@example.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/username" target="_blank">@username</a></p>
+    </section>
+  </main>
 
+  <footer>
+    &copy; 2025 Nama Kamu
+  </footer>
+</body>
+</html>
