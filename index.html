@@ -1,76 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portofolio Saya</title>
     <style>
+        /* Reset some default */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #f2f4f7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
             margin: 0;
             padding: 0;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
-            width: 80%;
-            margin: 40px auto;
+            max-width: 900px;
+            margin: 50px auto;
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px 50px;
         }
 
         .profile {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
         .profile img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #007bff;
+            border: 5px solid #007bff;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-text {
+            flex: 1;
+            min-width: 280px;
         }
 
         h1 {
             color: #007bff;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 0;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
         }
 
         p {
-            color: #333;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #444;
         }
 
         .skills {
-            margin-top: 30px;
+            margin-top: 50px;
         }
 
         .skills h2 {
             color: #007bff;
-            border-bottom: 2px solid #007bff;
+            border-bottom: 3px solid #007bff;
             display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.8rem;
         }
 
         ul {
             list-style-type: none;
             padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
         }
 
         ul li {
-            background: #e9f2ff;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
+            background: #e6f0ff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: 500;
+            color: #0056b3;
+            box-shadow: 0 2px 6px rgba(0, 86, 179, 0.2);
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #cce0ff;
+            cursor: default;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            color: #555;
+            margin-top: 60px;
+            color: #777;
+            font-size: 0.9rem;
+            user-select: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-text {
+                min-width: auto;
+            }
+
+            ul {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
         }
     </style>
 </head>
@@ -79,12 +141,12 @@
     <div class="container">
         <div class="profile">
             <!-- Ganti "foto.jpg" dengan nama file foto kamu -->
-            <img src="foto.jpg" alt="Foto Profil">
-            <div>
+            <img src="foto.jpg" alt="Foto Profil" />
+            <div class="profile-text">
                 <h1>Nama Kamu</h1>
                 <h3>Siswa Rekayasa Perangkat Lunak</h3>
                 <p>
-                    Saya adalah siswa Rekayasa Perangkat Lunak yang tertarik pada pengolahan data dan pengembangan perangkat lunak. 
+                    Saya adalah siswa Rekayasa Perangkat Lunak yang tertarik pada pengolahan data dan pengembangan perangkat lunak.
                     Saya senang memecahkan masalah dengan logika dan data untuk menciptakan solusi teknologi yang efisien dan bermanfaat.
                 </p>
             </div>
