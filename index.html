@@ -26,3 +26,143 @@
 
         header nav ul {
             list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 40px;
+            background: #1e1e1e;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+            min-width: 250px;
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #projects .projects-gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding-right: 0;
+            }
+
+            .hero img {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Selamat datang di Portofolio Saya!</h1>
+            <p>Hai, saya [Nama Anda], seorang pengembang web.</p>
+        </div>
+        <img src="foto-profil.jpg" alt="Foto Profil Saya">
+    </section>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Saya Kaila Mania siswa SMK Informatika Utama dengan jurusan Rekayasa Perangkat Lunak(RPL), yang tertarik pada pengolahan data dan pengembangan perangkat lunak.
+        Saya senang memecahkan masalah dengan logika dan data untuk menciptakan solusi teknologi yang efisien dan bermanfaat.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Proyek Saya</h2>
+        <div class="projects-gallery">
+            <div class="project">
+                <img src="project1.jpg" alt="Proyek 1">
+                <p>Proyek Web Aplikasi</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Proyek 2">
+                <p>Proyek Website E-Commerce</p>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Proyek 3">
+                <p>Proyek Blog Pribadi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Email saya: <a href="mailto:email@domain.com">email@domain.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Nama Anda]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
