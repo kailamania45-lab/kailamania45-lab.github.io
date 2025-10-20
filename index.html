@@ -1,163 +1,290 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Saya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Kaila Mania</title>
   <style>
-    /* Reset & base style */
+    /* === RESET DAN DASAR === */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #f7f9fc;
-      color: #333;
-      line-height: 1.6;
+      background: #0b0015;
+      color: #fff;
+      overflow-x: hidden;
     }
 
-    header {
-      background: linear-gradient(135deg, #4b6cb7, #182848);
-      color: white;
-      padding: 4rem 2rem;
+    h2 {
       text-align: center;
+      margin: 60px 0 20px;
+      color: #c77dff;
+      text-shadow: 0 0 15px #9d4edd;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #dcdcdc;
-    }
-
+    /* === NAVBAR === */
     nav {
-      background: #ffffff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background: rgba(30, 0, 50, 0.9);
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
+      padding: 10px;
+      backdrop-filter: blur(8px);
     }
 
     nav a {
-      color: #333;
+      color: #e0aaff;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: 600;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #4b6cb7;
+      color: #ffb3ff;
+      text-shadow: 0 0 8px #ffb3ff;
     }
 
+    /* === HEADER === */
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(180deg, #240046, #0b0015);
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #c77dff;
+      box-shadow: 0 0 20px #9d4edd;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-top: 15px;
+    }
+
+    header h1 span {
+      color: #c77dff;
+      text-shadow: 0 0 15px #9d4edd;
+    }
+
+    header p {
+      color: #d8b4fe;
+      font-size: 1.1em;
+      margin-top: 5px;
+    }
+
+    /* === BAGIAN UMUM === */
     section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      width: 80%;
+      margin: auto;
+      background: rgba(50, 0, 90, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(150, 80, 255, 0.2);
+      margin-bottom: 50px;
     }
 
-    section h2 {
-      color: #4b6cb7;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #4b6cb7;
-      display: inline-block;
+    section p {
+      line-height: 1.8;
+      text-align: justify;
+      color: #e9d8fd;
     }
 
+    /* === KEAHLIAN === */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skills div {
+      background: rgba(100, 0, 180, 0.3);
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #7b2cbf;
+      transition: 0.3s;
+    }
+
+    .skills div:hover {
+      background: #c77dff;
+      color: #1a001f;
+      box-shadow: 0 0 25px #e0aaff;
+    }
+
+    /* === PROJECT === */
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
     }
 
     .project-card {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s;
+      background: rgba(50, 0, 90, 0.3);
+      padding: 15px;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 0 20px rgba(170, 80, 255, 0.3);
+      transition: 0.3s;
     }
 
     .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #c77dff;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* === SERTIFIKAT === */
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .certificate {
+      background: rgba(70, 0, 130, 0.4);
+      padding: 15px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 0 15px #9d4edd;
+      transition: 0.3s;
+    }
+
+    .certificate:hover {
       transform: translateY(-5px);
+      box-shadow: 0 0 25px #c77dff;
     }
 
-    .project-card h3 {
-      margin-bottom: 0.5rem;
+    /* === KONTAK === */
+    .contact {
+      text-align: center;
+      padding-bottom: 40px;
     }
 
-    .project-card p {
-      font-size: 0.9rem;
+    .contact a {
+      color: #c77dff;
+      text-decoration: none;
+      font-weight: bold;
     }
 
+    .contact a:hover {
+      color: #ffb3ff;
+      text-shadow: 0 0 10px #ffb3ff;
+    }
+
+    /* === FOOTER === */
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background: #eee;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 3rem;
+      padding: 20px;
+      background: rgba(30, 0, 50, 0.9);
+      color: #d0a2ff;
+      font-size: 0.9em;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Nama Kamu</h1>
-    <p>Web Developer | UI/UX Designer | Freelancer</p>
-  </header>
 
+  <!-- NAVBAR -->
   <nav>
-    <a href="#tentang">Tentang</a>
-    <a href="#proyek">Proyek</a>
+    <a href="#tentang">Tentang Saya</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#project">Project</a>
+    <a href="#sertifikat">Sertifikat</a>
     <a href="#kontak">Kontak</a>
   </nav>
 
+  <!-- HEADER -->
+  <header>
+    <img src="https://via.placeholder.com/120" alt="Foto Profil">
+    <h1>Halo, Saya <span>Kaila Mania</span></h1>
+    <p>Junior Programmer</p>
+  </header>
+
+  <!-- TENTANG SAYA -->
   <section id="tentang">
     <h2>Tentang Saya</h2>
-    <p>
-      Saya adalah seorang web developer yang berfokus pada pembuatan website interaktif dan responsif.
-      Saya senang belajar hal baru dan tertarik pada teknologi web modern seperti React, Tailwind, dan Next.js.
-    </p>
+    <p>Halo! Saya Kaila Mania, siswa kelas XI SMK Informatika Utama jurusan Pengembangan Perangkat Lunak dan Gim (PPLG). Saya terampil dalam pengembangan aplikasi web menggunakan HTML, CSS, PHP, NetBeans, dan MySQL. Memiliki karakter proaktif, adaptif, serta mampu bekerja sama dengan tim. Saat ini saya sedang menjalani Praktik Kerja Lapangan (PKL) sebagai programmer.</p>
   </section>
 
-  <section id="proyek">
-    <h2>Proyek Saya</h2>
+  <!-- KEAHLIAN -->
+  <section id="keahlian">
+    <h2>Keahlian</h2>
+    <div class="skills">
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+      <div>MySQL</div>
+      <div>NetBeans</div>
+      <div>Laragon (Dasar)</div>
+      <div>Microsoft Office</div>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section id="project">
+    <h2>Project</h2>
     <div class="projects">
       <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Website portofolio pribadi dengan HTML, CSS, dan JavaScript. Tampilan bersih dan responsif.</p>
+        <img src="https://via.placeholder.com/350x200" alt="Kasir NetBeans">
+        <h3>Kasir Sederhana NetBeans</h3>
+        <p>Aplikasi kasir sederhana untuk menghitung total pembelian, diskon, dan kembalian secara otomatis menggunakan NetBeans.</p>
       </div>
+
       <div class="project-card">
-        <h3>Todo App</h3>
-        <p>Aplikasi Todo List dengan fitur simpan lokal, dibuat dengan JavaScript murni.</p>
-      </div>
-      <div class="project-card">
+        <img src="https://via.placeholder.com/350x200" alt="Toko Online">
         <h3>Website Toko Online</h3>
-        <p>Toko online sederhana dengan fitur keranjang belanja dan halaman produk.</p>
+        <p>Website toko online sederhana dengan tampilan modern, responsif, dan mudah digunakan. Dibuat menggunakan HTML dan CSS.</p>
       </div>
     </div>
   </section>
 
-  <section id="kontak">
-    <h2>Kontak</h2>
-    <p>Email: kamu@email.com</p>
-    <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
+  <!-- SERTIFIKAT -->
+  <section id="sertifikat">
+    <h2>Sertifikat</h2>
+    <div class="certificates">
+      <div class="certificate">
+        <h4>Introduction to HTML</h4>
+        <p>Diperoleh dari SoloLearn pada 2 September 2025.</p>
+      </div>
+      <div class="certificate">
+        <h4>Introduction to CSS</h4>
+        <p>Diperoleh dari SoloLearn pada 4 September 2025.</p>
+      </div>
+      <div class="certificate">
+        <h4>Introduction to JavaScript</h4>
+        <p>Diperoleh dari SoloLearn pada 5 September 2025.</p>
+      </div>
+      <div class="certificate">
+        <h4>JavaScript Intermediate</h4>
+        <p>Diperoleh dari SoloLearn pada 13 September 2025.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- KONTAK -->
+  <section id="kontak" class="contact">
+    <h2>Kontak</h2>
+    <p>Hubungi saya melalui:</p>
+    <p>📞 <a href="#">Nomor Telepon</a> | 📧 <a href="#">Email</a></p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Nama Kamu. Dibuat dengan ❤ dan semangat ngoding.
+    © 2025 Kaila Mania — SMK INFORMATIKA UTAMA
   </footer>
+
 </body>
 </html>
